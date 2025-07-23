@@ -1,0 +1,131 @@
+:root {
+  --main-shadow: 0 0 10px #ddd;
+  --background-section: #f6f6f6;
+  --header-section: #eee;
+  --main-color-p: #888;
+  --main-color: #0075ff;
+  --main-font-size: 25px;
+  --color-border-2: #f59e0b;
+  --color-border-3: #22c55e;
+  --color-border-4: red;
+}
+
+
+/* End Variable */
+
+/* Start body */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+
+
+
+.container-courcers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  width: 95%;
+  margin: auto;
+}
+.container-courcers .cource {
+  margin-bottom: 15px;
+}
+
+.container-courcers .cource .image {
+  position: relative;
+}
+
+.container-courcers .cource .image img:first-child {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.container-courcers .cource .image img:last-child {
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  left: 15px;
+  top: 15px;
+  border: 3px solid #fff;
+}
+
+
+.container-courcers .cource .info {
+  margin-top: -5px;
+  width: 90%;
+  background-color: #fff;
+  padding: 20px;
+  height: 160px;
+  position: relative;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.container-courcers .cource .info .info-cource {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid var(--header-section);
+}
+
+.container-courcers .cource .info .info-cource h3{
+  font-size: 17px;
+}
+
+.container-courcers .cource .info .info-cource p{
+  color: var(--main-color-p);
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.container-courcers .cource .course {
+  position: absolute;
+  width: fit-content;
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 5px;
+  left: 35%;
+  top: 60%;
+  font-size: 15px;
+}
+
+.container-courcers .cource .member {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.container-courcers .cource .member .user-1 {
+  font-size: 14px;
+  color: var(--main-color-p);
+}
+
+.container-courcers .cource .member .user-1 i {
+  font-size: 14px;
+  color: var(--main-color-p);
+}
+
+.container-courcers .cource .member .user-1 span {
+  font-size: 14px;
+  color: var(--main-color-p);
+}
+
+
+
+

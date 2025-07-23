@@ -1,0 +1,297 @@
+:root {
+    --main-shadow: 0 0 10px #ddd;
+    --background-section: #f6f6f6;
+    --header-section: #eee;
+    --main-color-p: #888;
+    --main-color: #0075ff;
+    --main-font-size: 25px;
+    --color-border-2: #f59e0b;
+    --color-border-3: #22c55e;
+    --color-border-4: red;
+}
+
+
+/* End Variable */
+
+/* Start body */
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+}
+
+
+.container-files {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.container-files .files {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 74%;
+    gap: 30px;
+}
+
+@media (max-width: 991px) {
+    .container-files .files {
+        width: 60%;
+    }
+}
+
+@media (max-width: 778px) {
+    .container-files {
+        flex-direction: column;
+    }
+
+    .container-files .files {
+        width: 95%;
+    }
+}
+
+.container-files .files .file {
+    background-color: #fff;
+    box-shadow: var(--main-shadow);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.container-files .files .file .main-file {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--header-section);
+}
+
+.container-files .files .file .main-file:hover img {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+
+.container-files .files .file .main-file .download {
+    width: 100%;
+    height: 30px;
+}
+
+.container-files .files .file .main-file .download i {
+    color: var(--main-color-p);
+    font-size: 15px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container-files .files .file .main-file .info-file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-files .files .file .main-file .info-file img {
+    width: 60px;
+}
+
+.container-files .files .file .main-file .info-file span {
+    margin-top: 5px;
+}
+
+.container-files .files .file .main-file .name {
+    font-size: 15px;
+    color: var(--main-color-p);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.container-files .files .file .bottom-file {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+.container-files .files .file .bottom-file .data {
+    font-size: 13px;
+    color: var(--main-color-p);
+}
+
+.container-files .files .file .bottom-file .size {
+    font-size: 13px;
+    color: var(--main-color-p);
+}
+
+.container-files .statistics {
+    min-width: 20%;
+    max-width: 40%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: var(--main-shadow);
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 778px) {
+    .container-files .statistics {
+        max-width: 95%;
+        order: -1;
+        margin-bottom: 10px;
+    }
+}
+
+.container-files .statistics h3 {
+    font-size: 25px;
+}
+
+.container-files .statistics .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-files .statistics .lists .list {
+    display: flex;
+    margin-top: 15px;
+    border: 1px solid var(--header-section);
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.container-files .statistics .lists .list .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-files .statistics .lists .list .info i {
+    font-size: 15px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    padding: 15px;
+}
+
+.container-files .statistics .lists .list .info i.red {
+    color: #f44336;
+    background-color: rgb(244 67 54 / 20%);
+}
+
+.container-files .statistics .lists .list .info i.green {
+    color: #22c55e;
+    background-color: rgb(34 197 94 / 20%);
+}
+
+.container-files .statistics .lists .list .info i.blue {
+    color: #0075ff;
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.container-files .statistics .lists .list .info i.orange {
+    color: #f59e0b;
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.container-files .statistics .lists .list .info .info-list h4 {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.container-files .statistics .lists .list .info .info-list span {
+    font-size: 14px;
+    color: var(--main-color-p);
+}
+
+.container-files .statistics .lists .list .size-of {
+    font-size: 14px;
+    color: var(--main-color-p);
+}
+
+
+.container-files .statistics .uploads {
+    margin-top: 15px;
+}
+
+.container-files .statistics .uploads a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: auto;
+}
+
+
+.container-files .statistics .uploads a i {
+    color: #fff;
+    position: relative;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+}
+
+
+.container-files .statistics .uploads a:hover i {
+    animation: up-down 0.8s linear infinite;
+    -webkit-animation: up-down 0.8s linear infinite;
+    -moz-animation: up-down 0.8s linear infinite;
+    -ms-animation: up-down 0.8s linear infinite;
+    -o-animation: up-down 0.8s linear infinite;
+}
+
+/* Start Anmation */
+
+@keyframes up-down {
+
+    0%,
+    20% {
+        top: 0;
+    }
+
+    30%,
+    70% {
+        top: -5px;
+    }
+
+    80%,
+    100% {
+        top: 0;
+    }
+}
+
+/* End Anmation */

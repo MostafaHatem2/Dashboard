@@ -1,0 +1,160 @@
+
+:root {
+  --main-shadow: 0 0 10px #ddd;
+  --background-section: #f6f6f6;
+  --header-section: #eee;
+  --main-color-p: #888;
+  --main-color: #0075ff;
+  --main-font-size: 25px;
+  --color-border-2: #f59e0b;
+  --color-border-3: #22c55e;
+  --color-border-4: red;
+}
+
+
+/* End Variable */
+
+/* Start body */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+
+
+.container-frindes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 15px;
+    width: 95%;
+    margin: auto;
+}
+
+.container-frindes .secion-friend {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--main-shadow);
+    width: 90%;
+}
+
+.container-frindes .secion-friend .contact {
+    margin-bottom: 10px;
+}
+
+.container-frindes .secion-friend .contact i {
+    width: fit-content;
+    padding: 7px;
+    background-color: var(--header-section);
+    border-radius: 50%;
+    color: var(--main-color-p);
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+}
+
+.container-frindes .secion-friend .contact i:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.container-frindes .secion-friend .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--header-section);
+    margin-bottom: 15px;
+}
+
+
+.container-frindes .secion-friend .profile .image img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.container-frindes .secion-friend .profile .title-name  {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.container-frindes .secion-friend .profile .title-name h3 {
+    font-size: 17px;
+}
+
+.container-frindes .secion-friend .profile .title-name span {
+    font-size: 15px;
+    color: var(--main-color-p);
+}
+
+.container-frindes .secion-friend .status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--header-section);
+}
+
+.container-frindes .secion-friend .status .vip {
+    font-size: 40px;
+    font-weight: bold;
+    color: orange;
+    opacity: 0.2;
+}
+
+.container-frindes .secion-friend .status .lists .status-list {
+    margin-bottom: 15px;
+}
+
+.container-frindes .secion-friend .status .lists .status-list span {
+    font-size: 15px;
+}
+
+.container-frindes .secion-friend .control-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-frindes .secion-friend .control-section .joined {
+    font-size: 14px;
+    color: var(--main-color-p);
+    margin-top: 5px;
+}
+
+.container-frindes .secion-friend .control-section .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-frindes .secion-friend .control-section .control a {
+    margin-left: 15px;
+    font-size: 15px;
+    color: #fff;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.container-frindes .secion-friend .control-section .control a:first-child {
+    background-color: var(--main-color);
+}
+
+.container-frindes .secion-friend .control-section .control a:last-child {
+    background-color: var(--color-border-4);
+}

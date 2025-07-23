@@ -1,0 +1,465 @@
+
+
+:root {
+    --main-shadow: 0 0 10px #ddd;
+    --background-section: #f6f6f6;
+    --header-section: #eee;
+    --main-color-p: #888;
+    --main-color: #0075ff;
+    --main-font-size: 25px;
+    --color-border-2: #f59e0b;
+    --color-border-3: #22c55e;
+    --color-border-4: red;
+}
+
+
+/* End Variable */
+
+/* Start body */
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+}
+
+
+
+
+/* Start Info */
+
+.container-profile {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-info {
+    display: flex;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+}
+
+@media (max-width: 778px) {
+    .profile-info {
+        flex-direction: column;
+    }
+}
+
+.profile-info .logo-profile{
+    width: 25%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+    gap: 20px;
+    border-right: 1px solid #ddd;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 0;
+    min-width: 200px;
+    margin-right: 0;
+}
+
+@media (max-width: 778px) {
+    .profile-info .logo-profile {
+        width: 100%;
+    }
+}
+
+.profile-info .logo-profile .avater-profile {
+    width: 100px;
+    height: 100px;
+}
+
+.profile-info .logo-profile .avater-profile img {
+    width: 100%;
+    height: 100%;   
+}
+
+.profile-info .logo-profile .info-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    min-width: 50%;
+    max-width: 80%;
+}
+
+.profile-info .logo-profile .info-profile h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-info .logo-profile .info-profile span {
+    font-size: 17px;
+    color: var(--main-color-p);
+}
+
+.profile-info .logo-profile .info-profile::before {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.profile-info .logo-profile .info-profile::after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 70%;
+    height: 5px;
+    background-color:var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    z-index: 4;
+}
+
+.profile-info .logo-profile .stars {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.profile-info .logo-profile .stars .full-star {
+    font-size: 15px;
+}
+
+.profile-info .logo-profile .rating {
+    font-size: 13px;
+    color: var(--main-color-p);
+}
+
+.profile-info .info-total {     
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    padding-bottom: 20px;
+}
+
+
+@media (max-width: 778px) {
+    .profile-info .info-total {
+        width: calc(100% - 20px);
+    }
+}
+
+
+.profile-info .info-total .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    padding: 20px 10px ;
+    border-radius: 5px;
+
+}
+
+.profile-info .info-total .info-section:not(:last-child) {
+    border-bottom: 1px solid var(--header-section);
+}
+
+
+.profile-info .info-total .info-section:hover {
+    background-color: var(--header-section);
+}
+
+@media (max-width: 778px) {
+    .profile-info .info-total .info-section {
+        text-align: center;
+    }
+}
+
+.profile-info .info-total .info-section:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.profile-info .info-total .info-section h3 {
+    color: var(--main-color-p);
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+
+.body-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+
+
+.site-control-button {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+
+@media (max-width: 778px) {
+    .site-control-button {
+        left: 34%;
+    }
+}
+
+.p .main-text {
+    color: var(--main-color-p);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.p .sub-text {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+
+.site-control-button .custom-toggle {
+    height: 25px;   
+    width: 80px;
+}
+
+.field-controle .custom-toggle {
+    left: 0;
+}
+
+
+.site-control-button .custom-toggle::before {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 70%;
+}
+
+
+/* End Info */
+
+/* Start section-two */
+
+.section-two {
+    display: flex;
+    width: calc(100% - 20px);
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: var(--main-shadow);
+}
+
+@media (max-width: 778px) {
+    .section-two {
+        flex-direction: column;
+    }
+}
+
+
+/* Start Skills */
+
+.my-skills {
+    background-color: #fff;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@media (max-width: 778px) {
+    .my-skills {
+        width: 100%;
+    }
+}
+
+.my-skills .top-title {
+    margin: 0;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.elments {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.elments .elment {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(85px, 1fr));
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 991px) {
+    .elments .elment {
+        grid-template-columns: repeat(auto-fill,minmax(50px, 1fr));
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 778px) {
+    .elments .elment {
+        display: flex ;
+        justify-content: center;
+    }
+}
+
+.elments .elment:not(:last-child) {
+    border-bottom: 1px solid var(--header-section);
+    
+}
+
+.elments .elment p {
+    padding-bottom: 10px;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: var(--header-section);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+/* End Skills */
+
+/* Start activities */
+
+.my-activities-title  {
+    margin-top: 15px;
+}
+
+.activities {
+    flex: 1;
+    background-color: #fff;
+    margin-left: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@media (max-width: 778px) {
+    .activities {
+        flex: 0;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+.activities .activities-list {
+    margin-left: 15px;
+    width: 95%;
+}
+
+.activities .activities-list .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+    .activities .activities-list .list {
+        margin-bottom: 80px;
+    }
+}
+
+
+.activities .activities-list .list .info {
+    display: flex;
+    align-items: center;
+}
+
+.activities .activities-list .list .info .image {
+    margin-right: 15px;
+}
+
+.activities .activities-list .list .info .image img {
+    width: 65px;
+    height: 65px;
+}
+
+
+.activities .activities-list .list .info .info-info h4 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.activities .activities-list .list .info .info-info span {
+    color: var(--main-color-p);
+}
+
+.activities .activities-list .list .data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+.activities .activities-list .list .data h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.activities .activities-list .list .data span {
+    color: var(--main-color-p);
+}
+
+
+/* End activities */
+
+
+/* End section-two */
